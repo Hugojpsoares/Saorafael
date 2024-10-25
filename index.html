@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cl&iacute;nica S&atilde;o Rafael</title>
+<link href="style/style.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="img/logoAba.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <style>
+        * {box-sizing: border-box;}
+        body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
+        .carousel {position: relative; width: 100%; max-width: 1000px; margin: auto; overflow: hidden;}
+        .slides {display: flex; transition: transform 0.5s ease-in-out;}
+        .slides img {width: 100%; border: 2px solid #ddd;}
+        .prev, .next {position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; cursor: pointer; background-color: rgba(0,0,0,0.5); color: white; border: none;}
+        .prev {left: 0;}
+        .next {right: 0;}
+        .dots {text-align: center; padding: 20px 0; background: #ddd;}
+        .dot {cursor: pointer; height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block;}
+        .active, .dot:hover {background-color: #717171;}
+    </style>
+</head>
+
+<body>
+	
+	<div class="container">
+		
+		<div class="Topo">
+			<div class="banner">
+			<a href="index.html">	<img src="img/logo_sao_rafael nova.png" width="217" height="164" alt=""/></a>
+<h1>Cl&iacute;nica S&atilde;o Rafael</h1>
+			</div><!--banner-->
+		
+			<div class="menu">
+				<nav class="dp-menu">
+				<ul class="menuprincipal">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="clinica.html">A Cl&iacute;nica</a>
+					<ul class="submenu">
+					<li><a href="historia.hmtl">Nossa Hist&oacute;ria</a></li>
+					<li><a href="estrutura.html">Estrutura</a></li>
+					<li><a href="convenios.html">Conv&ecirc;nios</a></li>
+					</ul></li>
+					<li><a href="tratamentos.html">Tratamentos</a></li>
+					<li><a href="equipe.html">Nossa Equipe</a></li>
+					<li><a href="contato.html">Entre em Contato</a></li>
+				</ul>
+					</nav>
+			</div><!--menu-->
+			
+		</div><!--topo-->	
+			
+<div class="carousel">
+    <div class="slides">
+        <img src="img/fotos/img1.jpg" alt="Image 1">
+        <img src="img/fotos/img2.jpg" alt="Image 2">
+        <img src="img/fotos/img3.jpg" alt="Image 3">
+        <img src="img/fotos/img4.jpg" alt="Image 4">
+        <img src="img/fotos/img5.jpg" alt="Image 5">
+    </div>
+    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+</div>
+<div class="dots" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slides")[0].children;
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>	
+		
+	<div class="conteudo">
+		
+	
+		
+		<div class="item">
+		
+		<h2>Bem-vindo ao Nosso Site</h2>
+
+<p>Estamos comprometidos em oferecer a você a melhor experiência online. Nossa missão é fornecer soluções inovadoras que atendam às suas necessidades, com qualidade e eficiência. Seja você um cliente em busca de informações, um parceiro de negócios ou alguém apenas curioso sobre o que fazemos, temos certeza de que encontrará tudo o que</p>
+</div>
+		<div class="item">
+<h2>Nossos Serviços</h2>
+
+Uma oferta ampla gama de serviços para ajudá-lo a alcançar seus objetivos. Desde consultoria especializada até suporte técnico, estamos aqui para garantir que suas expectativas sejam superadas. Nosso time de especialistas está sempre disponível para responder suas dúvidas e oferecer o
+</div>
+		<div class="item">
+<h2>Por que nós escolhemos?</h2>
+
+Com anos de experiência no mercado e uma equipe evoluída, estamos preparados para enfrentar qualquer desafio. Nossa abordagem é focada no cliente, buscando sempre soluções personalizadas e eficientes. Além disso, acreditamos na transparência e na comunicação aberta com nossos clientes.
+</div>
+		<div class="item">
+<h2><a href="#">Entre em Contato</a></h2>
+
+Estamos prontos para atender você! Fale conosco por meio do nosso formulário de contato ou pelas redes sociais. Ficaremos felizes em responder suas perguntas e ajudá-lo da melhor forma possível.
+		</div>
+		
+		</div><!--conteudo-->
+		
+	<div class="rodape">
+		
+		<p>Telefone: <a href="#"> (42) 3323-2787</a></p>
+<p>Email: <a href="#"> saorafaelfisioterapia@hotmail.com</a></p>
+
+<p>Rua Rodrigues Alves, 37 - Orfãs - Ponta Grossa - PR</p>
+Cep: 84015-440
+		
+		</div><!--rodape-->
+		
+	
+	
+	</div><!--container-->
+	
+</body>
+</html>
