@@ -85,8 +85,10 @@ width: 150px;}
  
 
 
-.conteudo{background-image: url("../img/heather-green-Kpj1c6eoPJA-unsplash.jpg");
+.conteudo{
 padding: 20px;	
+margin: auto;	
+	display: flex;
 	
 }
 
