@@ -1,0 +1,196 @@
+.container{
+    display: flex;
+}
+
+.topo{
+    position: fixed;
+    top: 0;
+    width: 100%; /* para garantir que ocupe toda a largura da tela */
+    z-index: 1000; /* maior que o carrossel e outros conteúdos */
+    background-color: white; /* cor de fundo */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    height: 128px;
+    transition: height 0.3s, padding 0.3s;
+}
+
+.logo img {
+    
+    max-width: 200px;
+    max-height: 146x;
+    transition: height 0.3s, width 0.3s;
+}
+
+.topo.reduzido .logo img{
+    max-width: 80px;
+    max-height: 55px;
+    
+
+}
+
+.topo.reduzido {
+    height: 50px; /* Altura reduzida */
+    padding: 5px; /* Padding reduzido */
+}
+.menu ul{
+    
+    list-style: none; 
+    background-color: white;
+      
+}
+
+.menu ul li{
+    display: inline;
+    position: relative;
+}
+
+.menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color:rgb(8, 90, 105);
+    padding: 10px;
+    font-size: 19px;
+    font-family: Helvetica, sans-serif;
+}
+
+.menu ul li a:hover{
+    color: rgb(8, 194, 194);
+}
+
+.menu ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+    width: 150px;
+}
+
+.menu ul li:hover ul{
+    display: block;
+}
+
+.menu ul ul a{
+    display: block;
+}
+
+.conteudo {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxes {display: flex;
+justify-content: center;
+align-items: flex-start;}
+
+
+
+.box {
+   display: flex;
+   flex-direction: column;
+    background-color: rgb(255, 242, 225);
+    margin: 5px;
+    padding: 10px;
+    font-family: arial;
+    max-width: 250px;
+    justify-content: center;
+}
+
+.box h1 {
+   
+    text-decoration: underline;
+    font-family:     'Arial Narrow', Arial, sans-serif;
+    color: darkslategray;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    background-color: #085a69; /* Cor azul de fundo */
+    color: white; /* Cor do texto */
+    padding: 20px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.informacoes-clinica, .copyright-e-midias {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.informacoes-clinica a, .copyright-e-midias a {
+    color: white;
+    text-decoration: none;
+}
+
+.informacoes-clinica a:hover, .copyright-e-midias a:hover {
+    text-decoration: underline;
+}
+
+.midias-sociais a {
+    margin: 0 5px;
+}
+
+.midias-sociais img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.carousel {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Adiciona responsividade */
+@media only screen and (max-width: 768px) {
+    .prev, .next {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
