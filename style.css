@@ -52,6 +52,7 @@ body {
 /* Menu mobile */
 .menu-mobile {
     display: none;
+    heigth: 50px;
 }
 
 .menu-mobile .burger {
