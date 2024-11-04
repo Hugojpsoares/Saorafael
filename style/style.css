@@ -9,6 +9,7 @@
     z-index: 1000; /* maior que o carrossel e outros conteúdos */
     background-color: white; /* cor de fundo */
     display: flex;
+    flew-wrap: wrap;
     justify-content: left;
     align-items: center;
     padding: 10px;
