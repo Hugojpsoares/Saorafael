@@ -1,0 +1,382 @@
+<html><head><base href="." target="_blank"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://use.typekit.net/hyg6akm.css">
+    <title>Clínica São Rafael</title>
+    <style>
+        @import url("https://use.typekit.net/[your-kit-code].css");
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            
+         
+        }
+
+        body h1 {
+            font-family: 'calibri';
+            color: #34495e;
+            font-weight: normal;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Navigation Styles */
+        .nav {
+            background-color: #739fc5;
+            padding: 15px 0;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav ul li {
+            position: relative;
+            margin: 0 20px;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            font-family: "acumin-variable", sans-serif;
+            font-variation-settings: "slnt" 0, "wdth" 100, "wght" 194.2857;
+        }
+
+        .nav ul li a:hover {
+            color: #3498db;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #2c3e50;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 100;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 4px;
+            margin-top: 10px;
+            opacity: 1;
+        }
+
+        .dropdown-content::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #2c3e50 transparent;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            background-color: #739fc5;
+            font-family: 'acumin-variable', sans-serif;
+            font-variation-settings: 'wght' 400;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #34495e;
+            color: #3498db;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Banner Styles */
+        .banner {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .banner-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .banner-slide.active {
+            opacity: 1;
+        }
+
+        .slide1 {
+            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide2 {
+            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
+                        url('https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide3 {
+            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
+                        url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .banner-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .banner-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Content Styles */
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            min-height: 500px;
+            position: relative;
+        }
+
+        .content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 167px;
+            background-image: url('/logo_sao_rafael nova.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .content h1, .content p {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #739fc5;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav ul li {
+                margin: 10px 0;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .content::before {
+                width: 300px;
+                height: 100px;
+            }
+
+            .banner {
+                height: 300px;
+            }
+
+            .banner-content h2 {
+                font-size: 1.8em;
+            }
+
+            .banner-content p {
+                font-size: 1em;
+            }
+
+            .dropdown-content {
+                position: static;
+                transform: none;
+                background-color: #34495e;
+                margin-top: 0;
+                box-shadow: none;
+                opacity: 1;
+            }
+
+            .dropdown-content::before {
+                display: none;
+            }
+
+            .dropdown-content a {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="logo_sao_rafael nova.png" alt="Logo Clínica São Rafael - Design moderno em tons profissionais" width="300" height="100" class="logo">
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="https://clinicasaorafael.com/home">Home</a></li>
+            <li class="dropdown">
+                <a href="https://clinicasaorafael.com/sobre">Sobre</a>
+                <div class="dropdown-content">
+                    <a href="https://clinicasaorafael.com/sobre/historia">História</a>
+                    <a href="https://clinicasaorafael.com/sobre/estrutura">Estrutura</a>
+                    <a href="https://clinicasaorafael.com/sobre/convenios">Convênios</a>
+                </div>
+            </li>
+            <li><a href="https://clinicasaorafael.com/tratamentos">Tratamentos</a></li>
+            <li><a href="https://clinicasaorafael.com/equipe">Equipe</a></li>
+            <li><a href="https://clinicasaorafael.com/contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="banner-slide slide1 active">
+            <div class="banner-content">
+                <h2>Excelência em Saúde</h2>
+                <p>Cuidando de você com o que há de melhor em tecnologia e profissionais</p>
+            </div>
+        </div>
+        <div class="banner-slide slide2">
+            <div class="banner-content">
+                <h2>Estrutura Moderna</h2>
+                <p>Instalações confortáveis e equipamentos de última geração</p>
+            </div>
+        </div>
+        <div class="banner-slide slide3">
+            <div class="banner-content">
+                <h2>Equipe Especializada</h2>
+                <p>Profissionais altamente qualificados para cuidar da sua saúde</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <h1>Sobre Nós</h1>
+        <p>Aqui você encontrará conteúdo específico para cada página.</p>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Telefone: (XX) XXXX-XXXX</p>
+                <p>Email: contato@clinicasaorafael.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Endereço</h3>
+                <p>Rua Exemplo, 123</p>
+                <p>Bairro - Cidade/Estado</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 8h às 18h</p>
+                <p>Sábado: 8h às 12h</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="https"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (!this.closest('.dropdown-content')) {
+                        e.preventDefault();
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            const slides = document.querySelectorAll('.banner-slide');
+            let currentSlide = 0;
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
+</html>
