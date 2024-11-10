@@ -1,0 +1,132 @@
+<html><head><base href="." target="_blank"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://use.typekit.net/hyg6akm.css">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="icon" type="image/png" href="img/Logo/logoAba.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Clínica São Rafael</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="img/Logo/logo_sao_rafael nova.png" alt="Logo Clínica São Rafael - Design moderno em tons profissionais" width="300" height="100" class="logo">
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="https://clinicasaorafael.com/home">Home</a></li>
+            <li class="dropdown">
+                <a href="https://clinicasaorafael.com/sobre">Sobre</a>
+                <div class="dropdown-content">
+                    <a href="https://clinicasaorafael.com/sobre/historia">História</a>
+                    <a href="https://clinicasaorafael.com/sobre/estrutura">Estrutura</a>
+                    <a href="https://clinicasaorafael.com/sobre/convenios">Convênios</a>
+                </div>
+            </li>
+            <li><a href="https://clinicasaorafael.com/tratamentos">Tratamentos</a></li>
+            <li><a href="https://clinicasaorafael.com/equipe">Equipe</a></li>
+            <li><a href="https://clinicasaorafael.com/contato">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="conteudo">
+       
+   <!-- <div class="banner">
+        <div class="banner-slide slide1 active">
+            <div class="banner-content">
+                <h2>Excelência em Saúde</h2>
+                <p>Cuidando de você com o que há de melhor em tecnologia e profissionais</p>
+            </div>
+        </div>
+        <div class="banner-slide slide2">
+            <div class="banner-content">
+                <h2>Estrutura Moderna</h2>
+                <p>Instalações confortáveis e equipamentos de última geração</p>
+            </div>
+        </div>
+        <div class="banner-slide slide3">
+            <div class="banner-content">
+                <h2>Equipe Especializada</h2>
+                <p>Profissionais altamente qualificados para cuidar da sua saúde</p>
+            </div>
+        </div>
+    </div>-->
+
+    <main class="content">
+        <h1>Banner em formato de carrossel</h1>
+        <p>Aqui ficará um banner em formato carrossel animado com 4 imagens que mudam as 
+            imagens automaticamente em um determinado periodo de tempo</p>
+        <p>colocaremos algumas fotos da clinica</p>
+        <h1>Uma seção de cards</h1>
+        <p>Aqui ficará uma seção com cards, um para cada especialidades que a clínica oferece, como Fisioterapia, terapia ocupacional,
+            fonoaudiologia, psicologia entre outras, com a seguinte estrutura:
+        </p>
+        <p>Subtitulo com o nome da especialidade</p>
+        <p>foto ilustrativa </p>
+        <p>pequeno resumo falando sobre a especialidade</p>
+        <p>e um botão de link saiba mais... levando a uma pagina especifica falando mais sobre a especialida</p>
+        <h1>fotos da estrutura da clínica</h1>
+        <p>em formato de banner de fotos da estrutura da clinica, com um resumo abaixo descrevendo 
+            um pouco da estrutura da clinica com um link abaixo saiba mais 
+            redirecionando para a pagina especica do site</p>
+         <h1>cards de especialidades</h1>
+         <h1>cards da equipe</h1>
+         
+            
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Telefone: <a href="tel:+5532999999999">(42) 3323-2787</a></p>
+                <p>Email: <a href="mailto:saorafaelfisioterapia@hotmail.com">saorafaelfisioterapia@hotmail.com</a></p>
+               
+            </div>
+            <div class="footer-section">
+                <h3>Endereço</h3>
+                <p>Rua Rodrigues Alves, 37 - Orfãs - Ponta Grossa - PR</p>
+                <p>Cep: 84015-440</p>
+            </div>
+        </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Sua Clínica. Todos os direitos reservados.</p>
+                <div class="midias-sociais">
+                    <a href="#"><img src="img/Logo/facebook (1).png" alt="Facebook"></a>
+                    <a href="#"><img src="img/Logo/instagram (1).png" alt="Instagram"></a>
+                    <a href="#"><img src="img/Logo/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="https"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (!this.closest('.dropdown-content')) {
+                        e.preventDefault();
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            const slides = document.querySelectorAll('.banner-slide');
+            let currentSlide = 0;
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
+</html>
